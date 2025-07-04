@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inventario de PCs</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <div class="text-center mb-4">
+      <h1 class="display-5">Los Romulitos Store</h1>
+      <p class="lead">Ventas de computadoras</p>
+    </div>
+
+    <div class="card shadow-sm p-4">
+      <div class="mb-3">
+        <label for="equipo" class="form-label">Selecciona un equipo:</label>
+        <select class="form-select" id="equipo">
+          <option value="" disabled selected>-- Selecciona --</option>
+          <option value="PC-001">PC-001</option>
+          <option value="PC-002">PC-002</option>
+          <option value="PC-003">PC-003</option>
+        </select>
+      </div>
+
+      <div id="info" class="mt-4" style="display: none;">
+        <h4 class="mb-3">🧾 Detalles del equipo</h4>
+        <ul class="list-group">
+          <li class="list-group-item"><strong>Marca:</strong> <span id="marca"></span></li>
+          <li class="list-group-item"><strong>Modelo:</strong> <span id="modelo"></span></li>
+          <li class="list-group-item"><strong>N° Serie:</strong> <span id="serie"></span></li>
+          <li class="list-group-item"><strong>Procesador:</strong> <span id="procesador"></span></li>
+          <li class="list-group-item"><strong>RAM:</strong> <span id="ram"></span></li>
+          <li class="list-group-item"><strong>Precio Unitario:</strong> $<span id="precio"></span></li>
+        </ul>
+
+        <div class="mt-4">
+          <label for="cantidad" class="form-label">Cantidad:</label>
+          <input type="number" class="form-control w-25" id="cantidad" min="1" value="1">
+        </div>
+
+        <div id="total" class="alert alert-success mt-3 fw-bold">Total: $0</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const inventario = {
+      "PC-001": {
+        marca: "Dell",
+        modelo: "OptiPlex 3080",
+        serie: "SN00123D",
+        procesador: "Intel i5-10400",
+        ram: "8 GB DDR4",
+        precio: 500
+      },
+      "PC-002": {
+        marca: "HP",
+        modelo: "EliteDesk 800 G5",
+        serie: "SN00256H",
+        procesador: "Intel i7-10700",
+        ram: "16 GB DDR4",
+        precio: 750
+      },
+      "PC-003": {
+        marca: "Lenovo",
+        modelo: "ThinkCentre M720",
+        serie: "SN00389L",
+        procesador: "Intel i3-9100",
+        ram: "4 GB DDR4",
+        precio: 400
+      }
+    };
+
+    const select = document.getElementById('equipo');
+    const cantidadInput = document.getElementById('cantidad');
+    const infoDiv = document.getElementById('info');
+    const totalDiv = document.getElementById('total');
+
+    function mostrarDetalles() {
+      const valor = select.value;
+      if (inventario[valor]) {
+        const equipo = inventario[valor];
+        document.getElementById('marca').textContent = equipo.marca;
+        document.getElementById('modelo').textContent = equipo.modelo;
+        document.getElementById('serie').textContent = equipo.serie;
+        document.getElementById('procesador').textContent = equipo.procesador;
+        document.getElementById('ram').textContent = equipo.ram;
+        document.getElementById('precio').textContent = equipo.precio;
+        infoDiv.style.display = 'block';
+        calcularTotal();
+      } else {
+        infoDiv.style.display = 'none';
+        totalDiv.textContent = "Total: $0";
+      }
+    }
+
+    function calcularTotal() {
+      const valor = select.value;
+      const cantidad = parseInt(cantidadInput.value) || 0;
+      if (inventario[valor]) {
+        const precio = inventario[valor].precio;
+        const total = precio * cantidad;
+        totalDiv.textContent = `Total: $${total}`;
+      }
+      else {
+        infoDiv.style.display = 'none';
+        totalDiv.textContent = "Total: $0";
+      }
+    }
+
+    select.addEventListener('change', mostrarDetalles);
+    cantidadInput.addEventListener('input', calcularTotal);
+  </script>
+</body>
+</html>
