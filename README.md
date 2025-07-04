@@ -13,5 +13,5 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-This is my page:  <a href="https://jolitris.github.io/jmmz/" target="_blank">punch me</a>
+This is my page:  <a href="https://jolitris.github.io/jmmz/" >https://jolitris.github.io/jmmz/</a>
 
