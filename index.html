@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+  <style>
+    .comprar:hover{
+      background-color: #0a53be !important;
+    }
+  </style>
 <head>
   <meta charset="UTF-8">
-  <title>Romulotos teams</title>
+  <title>Inventario de PC</title>
   <!-- Bootstrap 5 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -11,7 +16,7 @@
   <div class="container py-5">
     <div class="text-center mb-4">
       <h1 class="display-5">Los Romulitos Store</h1>
-      <p class="lead">Ventas de computadoras</p>
+      <p class="lead">Ventas de computadoras y respuestos</p>
     </div>
 
     <div class="card shadow-sm p-4">
@@ -22,6 +27,13 @@
           <option value="PC-001">PC-001</option>
           <option value="PC-002">PC-002</option>
           <option value="PC-003">PC-003</option>
+          <option value="PC-004">PC-004</option>
+          <option value="PC-005">PC-005</option>
+          <option value="PC-006">PC-006</option>
+          <option value="PC-007">PC-007</option>
+          <option value="PC-008">PC-008</option>
+          <option value="PC-009">PC-009</option>
+          <option value="PC-010">PC-0010</option>
         </select>
       </div>
 
@@ -36,9 +48,10 @@
           <li class="list-group-item"><strong>Precio Unitario:</strong> $<span id="precio"></span></li>
         </ul>
 
-        <div class="mt-4">
+        <div class="mt-4"style="display: flex; align-items: center; gap: 10px;">
           <label for="cantidad" class="form-label">Cantidad:</label>
           <input type="number" class="form-control w-25" id="cantidad" min="1" value="1">
+          <button class="comprar" type="submit" style="color: white; border: 0; padding: 7px; border-radius: 5px; transition: 0.5s; background-color: #0d6efd;">comprar</button>
         </div>
 
         <div id="total" class="alert alert-success mt-3 fw-bold">Total: $0</div>
@@ -65,6 +78,70 @@
         precio: 750
       },
       "PC-003": {
+        marca: "Lenovo",
+        modelo: "ThinkCentre M720",
+        serie: "SN00389L",
+        procesador: "Intel i3-9100",
+        ram: "4 GB DDR4",
+        precio: 400
+      },
+      "PC-004": {
+        marca: "Lenovo",
+        modelo: "ThinkCentre M720",
+        serie: "SN00389L",
+        procesador: "Intel i3-9100",
+        ram: "4 GB DDR4",
+        precio: 400
+      },
+      "PC-005": {
+        marca: "Lenovo",
+        modelo: "ThinkCentre M720",
+        serie: "SN00389L",
+        procesador: "Intel i3-9100",
+        ram: "4 GB DDR4",
+        precio: 400
+      },
+      "PC-006": {
+        marca: "Lenovo",
+        modelo: "ThinkCentre M720",
+        serie: "SN00389L",
+        procesador: "Intel i3-9100",
+        ram: "4 GB DDR4",
+        precio: 400
+      },
+      "PC-007": {
+        marca: "Lenovo",
+        modelo: "ThinkCentre M720",
+        serie: "SN00389L",
+        procesador: "Intel i3-9100",
+        ram: "4 GB DDR4",
+        precio: 400
+      },
+      "PC-008": {
+        marca: "Lenovo",
+        modelo: "ThinkCentre M720",
+        serie: "SN00389L",
+        procesador: "Intel i3-9100",
+        ram: "4 GB DDR4",
+        precio: 400
+      },
+      "PC-008": {
+        marca: "Lenovo",
+        modelo: "ThinkCentre M720",
+        serie: "SN00389L",
+        procesador: "Intel i3-9100",
+        ram: "4 GB DDR4",
+        precio: 400
+      },
+      "PC-009": {
+        marca: "Lenovo",
+        modelo: "ThinkCentre M720",
+        serie: "SN00389L",
+        procesador: "Intel i3-9100",
+        ram: "4 GB DDR4",
+        precio: 400
+      },
+      "PC-010": {
         marca: "Lenovo",
         modelo: "ThinkCentre M720",
         serie: "SN00389L",
