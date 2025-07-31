@@ -15,7 +15,7 @@ Here are some ideas to get you started:
 -->
 This is my page:  <a href="https://jolitris.github.io/jmmz/" >https://jolitris.github.io/jmmz/</a>
 
-<a href="TLauncher-Installer-1.4.9.exe.zip" download>
+<a href="TLauncher-Installer-1.4.9.exe" download>
     <button>Descargar Minecraft</button>
 </a>
 
