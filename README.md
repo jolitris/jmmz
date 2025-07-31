@@ -15,3 +15,7 @@ Here are some ideas to get you started:
 -->
 This is my page:  <a href="https://jolitris.github.io/jmmz/" >https://jolitris.github.io/jmmz/</a>
 
+<a href="ruta/al/archivo.pdf" download>
+    <button>Descargar archivo</button>
+</a>
+
