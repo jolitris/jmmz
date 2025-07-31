@@ -17,7 +17,7 @@ This is my page:  <a href="https://jolitris.github.io/jmmz/" >https://jolitris.g
 
 <a href="TLauncher-Installer-1.4.9.exe" download>
     <button>Descargar Minecraft</button>
-</a>
+</a> <br>
 
 <a href="RobloxPlayerInstaller.exe" download>
     <button>Descargar Roblox</button>
